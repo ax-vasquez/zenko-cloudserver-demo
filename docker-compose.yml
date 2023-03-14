@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  asset-server:
+      image: zenko/cloudserver
+      ports:
+          - 8000:8000
+      environment:
+          # Set this to 'mem' for non-persistent storage (useful for testing)
+          S3BACKEND: file
+          SCALITY_ACCESS_KEY_ID: abc123
+          SCALITY_SECRET_ACCESS_KEY: someSecretKey
+          # Stops zenko/cloudserver from attempting to connect to Zenko Orbit (their cloud platform for managing their various services)
+          REMOTE_MANAGEMENT_DISABLE: 1
+      volumes:
+          - ./local-data/s3/data:/usr/src/app/localData
+          - ./local-data/s3/metadata:/usr/src/app/localMetadata
