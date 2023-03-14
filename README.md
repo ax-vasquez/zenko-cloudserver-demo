@@ -6,6 +6,11 @@ This repo simply demonstrates how to configure zenko/cloudserver via `docker-com
 * [Scality - zenko/cloudserver docs](https://s3-server.readthedocs.io/en/latest/index.html)
 * https://www.zenko.io/
 
+## Why use this?
+
+It's effectively a free playground where you can learn and experiment with S3 without incurring expenses from AWS. Since you host the
+instance yourself, the only limitation is your data storage limits.
+
 ## First-time setup
 
 From the root, run `docker-compose up -d`. Then, configure your local `aws` installation with the credentials set in the `docker-compose.yml`
@@ -84,4 +89,5 @@ Once you've run this command, you'll _at least_ be able to download files from y
 URL format:
 
 > **`http://<BUCKET_NAME>.<S3_HOST>/<ASSET_KEY>`**
+* Where `S3_HOST` would be `localhost:8000` if using the defaults in this repo
 
