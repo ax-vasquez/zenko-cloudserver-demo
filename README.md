@@ -9,7 +9,7 @@ This repo simply demonstrates how to configure zenko/cloudserver via `docker-com
 ## Why use this?
 
 It's effectively a free playground where you can learn and experiment with S3 without incurring expenses from AWS. Since you host the
-instance yourself, the only limitation is your data storage limits.
+instance yourself, the only limitation is your data storage capacity.
 
 ## First-time setup
 
